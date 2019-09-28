@@ -21,7 +21,7 @@ environment:
   # Github token to commit pushed packages to repository
   github_user_repo: ionred/chocolatey-packages
   github_api_key:  
-    secure: 0+L3nCcLlPu5AAZuZg1c/cdUtlxx3uZhl3eJDps6M3beaYMzBbuwj96cM5Nm9eaO #https://ci.appveyor.com/tools/encrypt
+    secure: sQg0qfl2Nh84+rDZ5hNjLUR+6CwV3SNZR22wzhuEbBIt/FxmksNSt5kiNhIUZ6rL #https://ci.appveyor.com/tools/encrypt
 
 
   # Mail credentials - for error notifications
@@ -42,7 +42,7 @@ environment:
 
   # Chocolatey API key - to push updated packages
   api_key:
-    secure: YOUR_CHOCO_API_KEY_HERE_ENCRYPTED_STRING # https://ci.appveyor.com/tools/encrypt
+    secure: DXsxkYVODd3Szy5TvwTrzr7p/qr9jDg+N8/Y+BEoXTYwrqUjRAbzkMKTWxvD5pAx # https://ci.appveyor.com/tools/encrypt
 
 init:
 - git config --global user.email "bryanchaffin@bryanchaffin.com"
