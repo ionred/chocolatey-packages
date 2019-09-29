@@ -16,6 +16,5 @@ $packageArgs = @{
   checksum      = '2203e10b9277c0d74c3c12dc6808ea82f581fe01bd78a51b064d413eea9fd149'
   checksumType  = 'sha256'
 };
-if (Test-Path "C:\users\Public\Desktop\CPUID HWMonitor.lnk") {$KeepIcon = $True}
 Install-ChocolateyPackage @packageArgs;
-if (!$KeepIcon) {Remove-Item 'C:\Users\Public\Desktop\CPUID HWMonitor.lnk'};
+
