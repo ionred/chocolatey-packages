@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>microsoft-edge-insider</id>
+    <version>78.0.276.11</version>
+    <title>Microsoft Edge insider</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://www.microsoftedgeinsider.com/en-us/welcome</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/ionred/microsoft-edge-insider/master/microsoft-edge-insider.png</iconUrl>
+    <packageSourceUrl>https://github.com/ionred/microsoft-edge-insider</packageSourceUrl>
+    <tags>edge-insider edge microsoft browser beta</tags>
+    <summary>A beta version of Microsoft's New Edge browser through the Insider Channel, now based on the Chromium open source browser.</summary>
+    <description>A beta version of Microsoft's New Edge browser through the Insider Channel, now based on the Chromium open source browser.</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
