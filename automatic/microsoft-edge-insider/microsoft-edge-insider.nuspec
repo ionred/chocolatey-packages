@@ -4,11 +4,17 @@
   <metadata>
     <id>microsoft-edge-insider</id>
     <version>78.0.276.11</version>
+    <owners>ionred</owners>
     <title>Microsoft Edge insider</title>
     <authors>Microsoft</authors>
     <projectUrl>https://www.microsoftedgeinsider.com/en-us/welcome</projectUrl>
     <iconUrl>http://cdn.rawgit.com/ionred/microsoft-edge-insider/master/microsoft-edge-insider.png</iconUrl>
     <packageSourceUrl>https://github.com/ionred/microsoft-edge-insider</packageSourceUrl>
+    <licenseUrl>https://www.microsoft.com/en-us/servicesagreement/</licenseUrl>
+    <docsUrl>https://microsoftedgesupport.microsoft.com/hc/en-us</docsUrl>
+    <mailingListUrl>https://techcommunity.microsoft.com/t5/Microsoft-Edge-Insider/ct-p/MicrosoftEdgeInsider</mailingListUrl>
+    <bugTrackerUrl>https://microsoftedgesupport.microsoft.com/hc/en-us/requests/new</bugTrackerUrl>
+    <projectSourceUrl>https://thirdpartysource.microsoft.com/</projectSourceUrl>
     <tags>edge-insider edge microsoft browser beta</tags>
     <summary>A beta version of Microsoft's New Edge browser through the Insider Channel, now based on the Chromium open source browser.</summary>
     <description>A beta version of Microsoft's New Edge browser through the Insider Channel, now based on the Chromium open source browser.</description>
