@@ -1,7 +1,7 @@
 ﻿
 $ErrorActionPreference = 'Stop';
-$url32        = 'https://go.microsoft.com/fwlink/?linkid=2093377'
-$url64      = 'https://go.microsoft.com/fwlink/?linkid=2093376'
+$url32        = 'https://go.microsoft.com/fwlink/?linkid=2093436'
+$url64      = 'https://go.microsoft.com/fwlink/?linkid=2093291'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -11,9 +11,9 @@ $packageArgs = @{
 
   softwareName  = 'Microsoft Edge Dev'
 
-  checksum32      = '03207F387E83003A64D850EC9F455431C2A61CE897E336C598116ABFD8D37D46'
+  checksum32      = 'a37ddb3969800acd52a5777ac8f2d3bf07e4048c944351e380b1b6b16a79be3b'
   checksumType  = 'sha256'
-  checksum64    = '22D062A299BCBCC3B1C1CD9A5F1AADFA9522F9CAD4C540F3A2130DFFA952B596'
+  checksum64    = 'bacbbfd6377905832ba91e7c234b85de19ee458bdbfb06d8f7f2dc7aa0ba93e7'
   checksumType64= 'sha256'
 
   silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
