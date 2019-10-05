@@ -12,15 +12,6 @@ $Options = [ordered]@{
     PluginPath    = ''                                      #Path to user plugins
 
     Report = @{
-<<<<<<< HEAD
-        Type = 'markdown'                                   #Report type: markdown or text
-        Path = "$PSScriptRoot\Update-AUPackages.md"         #Path where to save the report
-        Params= @{                                          #Report parameters:
-            Github_UserRepo = $Env:github_user_repo         #  Markdown: shows user info in upper right corner
-            NoAppVeyor  = $false                            #  Markdown: do not show AppVeyor build shield
-            UserMessage = "[History](#update-history)"       #  Markdown, Text: Custom user message to show
-            NoIcons     = $false                            #  Markdown: don't show icon
-=======
         Type = 'text'                                   #Report type: markdown or text
         Path = "$PSScriptRoot\Update-AUPackages.md"         #Path where to save the report
         Params= @{                                          #Report parameters:
@@ -28,7 +19,6 @@ $Options = [ordered]@{
             NoAppVeyor  = $true                             #  Markdown: do not show AppVeyor build shield
             UserMessage = "[History](#update-history)"      #  Markdown, Text: Custom user message to show
             NoIcons     = $true                             #  Markdown: don't show icon
->>>>>>> aa
             IconSize    = 32                                #  Markdown: icon size
             Title       = ''                                #  Markdown, Text: TItle of the report, by default 'Update-AUPackages'
         }
