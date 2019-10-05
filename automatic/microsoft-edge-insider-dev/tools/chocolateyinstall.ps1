@@ -9,7 +9,7 @@ $packageArgs = @{
   url           = $url32
   url64bit      = $url64
 
-  softwareName  = 'Microsoft Edge Beta'
+  softwareName  = 'Microsoft Edge Dev'
 
   checksum32      = '03207F387E83003A64D850EC9F455431C2A61CE897E336C598116ABFD8D37D46'
   checksumType  = 'sha256'

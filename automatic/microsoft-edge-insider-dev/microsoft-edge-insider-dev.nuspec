@@ -2,22 +2,22 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>microsoft-edge-insider</id>
+    <id>microsoft-edge-insider-dev</id>
     <version>78.0.276.11</version>
     <owners>ionred</owners>
-    <title>Microsoft Edge insider</title>
+    <title>Microsoft Edge insider - Dev</title>
     <authors>Microsoft</authors>
     <projectUrl>https://www.microsoftedgeinsider.com/en-us/welcome</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/ionred/chocolatey-packages/master/automatic/microsoft-edge-insider/microsoft-edge-insider.png</iconUrl>
-    <packageSourceUrl>https://github.com/ionred/chocolatey-packages/tree/master/automatic/microsoft-edge-insider</packageSourceUrl>
+    <iconUrl>https://raw.githubusercontent.com/ionred/chocolatey-packages/master/automatic/microsoft-edge-insider-dev/microsoft-edge-insider-dev.png</iconUrl>
+    <packageSourceUrl>https://github.com/ionred/chocolatey-packages/tree/master/automatic/microsoft-edge-insider-dev</packageSourceUrl>
     <licenseUrl>https://www.microsoft.com/en-us/servicesagreement/</licenseUrl>
     <docsUrl>https://microsoftedgesupport.microsoft.com/hc/en-us</docsUrl>
     <mailingListUrl>https://techcommunity.microsoft.com/t5/Microsoft-Edge-Insider/ct-p/MicrosoftEdgeInsider</mailingListUrl>
     <bugTrackerUrl>https://microsoftedgesupport.microsoft.com/hc/en-us/requests/new</bugTrackerUrl>
     <projectSourceUrl>https://thirdpartysource.microsoft.com/</projectSourceUrl>
-    <tags>edge-insider edge microsoft browser beta</tags>
-    <summary>A beta version of Microsoft's New Edge browser through the Insider Channel, now based on the Chromium open source browser.</summary>
-    <description>A beta version of Microsoft's New Edge browser through the Insider Channel, now based on the Chromium open source browser.</description>
+    <tags>edge-insider edge microsoft browser dev</tags>
+    <summary>A dev version of Microsoft's New Edge browser through the Insider Channel, now based on the Chromium open source browser.</summary>
+    <description>A dev version of Microsoft's New Edge browser through the Insider Channel, now based on the Chromium open source browser.</description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

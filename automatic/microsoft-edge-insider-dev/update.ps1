@@ -1,5 +1,5 @@
 import-module au
-$versions = 'https://32767.ga/edge/msedge-stable-win-arm64.json'
+$versions = 'https://32767.ga/edge/msedge-dev-win-arm64.json'
 $downloads = 'https://www.microsoftedgeinsider.com/en-us/enterprise'
 
 function global:au_SearchReplace {
@@ -21,8 +21,8 @@ function global:au_GetLatest {
     #$re  = "tidy-.+-win(32|64).zip"
     $version = ($version_page.Content -replace '\[\"', '[{"ver":"' -replace ',"', '}, {"ver":"' -replace ']', '}]' | ConvertFrom-Json) |Sort-Object -desc -Property { [version]$_.ver } | Select-Object -first 1 -ExpandProperty ver
     $download_page = Invoke-WebRequest -Uri $downloads 
-    $url32 = ($download_page.AllElements | Where-Object data-download-enterpriseid -match "Beta32MSI" |Select-Object -first 1 -ExpandProperty data-download-url)
-    $url64 = ($download_page.AllElements | Where-Object data-download-enterpriseid -match "Beta64MSI" |Select-Object -first 1 -ExpandProperty data-download-url)
+    $url32 = ($download_page.AllElements | Where-Object data-download-enterpriseid -match "Dev32MSI" |Select-Object -first 1 -ExpandProperty data-download-url)
+    $url64 = ($download_page.AllElements | Where-Object data-download-enterpriseid -match "Dev64MSI" |Select-Object -first 1 -ExpandProperty data-download-url)
     
     #$version = $url -replace '.exe', '' -split '_' | Select-Object -Last 1
     #$url32 = 'https://github.com' + $url[0]
