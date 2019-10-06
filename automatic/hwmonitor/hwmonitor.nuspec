@@ -2,7 +2,6 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>hwmonitor</id>
     <title>HWMonitor</title>
     <version>1.41.0.20190928</version>
@@ -22,10 +21,7 @@ Special hardware monitors such as abit® uGuru and Gigabyte® ODIN™ power supp
     <copyright>©2001-2016</copyright>
     <licenseUrl>http://www.cpuid.com/softwares/hwmonitor-pro/eula.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.githubusercontent.com/ionred/choco_hwmonitor/master/hwmonitor_icon.PNG</iconUrl>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
+    <iconUrl>https://raw.githubusercontent.com/ionred/chocolatey-packages/master/icons/hwmonitor_icon.PNG</iconUrl>
     <releaseNotes>http://www.cpuid.com/softwares/hwmonitor/versions-history.html</releaseNotes>
   </metadata>
   <files>
