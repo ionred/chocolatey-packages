@@ -4,7 +4,7 @@
   <metadata>
     <id>hwmonitor</id>
     <title>HWMonitor</title>
-    <version>1.41.0.20190928</version>
+    <version>1.41.0.20191005</version>
     <authors>CPUID</authors>
     <owners>ionred</owners>
     <summary>HWMonitor is a hardware monitoring program that reads PC systems main health sensors : voltages, temperatures, fans speed.</summary>
