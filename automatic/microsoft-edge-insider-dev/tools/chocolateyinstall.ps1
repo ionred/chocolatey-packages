@@ -11,9 +11,9 @@ $packageArgs = @{
 
   softwareName  = 'Microsoft Edge Dev'
 
-  checksum32      = 'a37ddb3969800acd52a5777ac8f2d3bf07e4048c944351e380b1b6b16a79be3b'
+  checksum32      = 'cc95adaafa9eb3e4ba0140b7fa2e681eaa1c6f4a6e4c38066b994709550c8b39'
   checksumType  = 'sha256'
-  checksum64    = 'bacbbfd6377905832ba91e7c234b85de19ee458bdbfb06d8f7f2dc7aa0ba93e7'
+  checksum64    = '05d950f2516a7a3da11676f80cf6756c172a1eb19e3fd6b56a46d4db028e2ceb'
   checksumType64= 'sha256'
 
   silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
