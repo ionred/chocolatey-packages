@@ -8,7 +8,7 @@ $Options = [ordered]@{
     Timeout       = 100                                     #Connection timeout in seconds
     UpdateTimeout = 1200                                    #Update timeout in seconds
     Threads       = 10                                      #Number of background jobs to use
-    Push          = $Env:au_Push -eq 'true'                 #Push to chocolatey
+    Push          = $au_Push -ne $False                 #Push to chocolatey    
     PluginPath    = ''                                      #Path to user plugins
 
     Report = @{
@@ -70,7 +70,8 @@ $Options = [ordered]@{
         $global:au_Version = ($p -split ':')[1]
     }
 }
-
+#write-host $au_Push
+#write-host $Options.Push
 if ($ForcedPackages) { Write-Host "FORCED PACKAGES: $ForcedPackages" }
 $global:au_Root = $Root                                    #Path to the AU packages
 $global:info = updateall -Name $Name -Options $Options

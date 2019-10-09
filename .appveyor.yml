@@ -87,14 +87,26 @@ build_script:
             }
         }
     }
-
+    $au_Push = $false
     ./update_all.ps1 -ForcedPackages $forced
+    $allexits = 0
+    Get-ChildItem .\automatic\ | ForEach-Object {.\build_tests\installcheck.ps1 -PackageName $_.Name; if ($lastexitcode -gt 0) {$allexits ++}}
+    write-host 'done testing'
+    if ($allexits -ne 0) {exit 99}
+    if (($info.Updated -match $true).Count -gt 0)  
+    {
+      $au_Push = $true
+      ./update_all.ps1 -ForcedPackages $forced
+    }
     7z a au_temp.zip $Env:TEMP\chocolatey\au\*
+    cp C:\ProgramData\chocolatey\logs\chocolatey.log .
+
 
 artifacts:
 - path: update_info.xml
 - path: Update-AUPackages.md
 - path: au_temp.zip
+- path: chocolatey.log
 
 notifications:
 - provider: Email
