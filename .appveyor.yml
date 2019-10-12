@@ -93,11 +93,9 @@ build_script:
     Get-ChildItem .\automatic\ | ForEach-Object {.\build_tests\installcheck.ps1 -PackageName $_.Name; if ($lastexitcode -gt 0) {$allexits ++}}
     write-host 'done testing'
     if ($allexits -ne 0) {exit 99}
-    if (($info.Updated -match $true).Count -gt 0)  
-    {
-      $au_Push = $true
-      ./update_all.ps1 -ForcedPackages $forced
-    }
+    
+    $info | ? Updated -match $true | select -ExpandProperty Name | % { $au_Push = $true; ./update_all.ps1 -ForcedPackages $_}
+    
     7z a au_temp.zip $Env:TEMP\chocolatey\au\*
     cp C:\ProgramData\chocolatey\logs\chocolatey.log .
 
