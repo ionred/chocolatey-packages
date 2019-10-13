@@ -45,7 +45,7 @@ environment:
     secure: DXsxkYVODd3Szy5TvwTrzr7p/qr9jDg+N8/Y+BEoXTYwrqUjRAbzkMKTWxvD5pAx # https://ci.appveyor.com/tools/encrypt
 
 init:
-- git config --global user.email "bryanchaffin@bryanchaffin.com"
+- git config --global user.email "ionred.dev@gmail.com"
 - git config --global user.name "ionred"
 - git config --global core.safecrlf false
 
@@ -90,7 +90,14 @@ build_script:
     $au_Push = $false
     ./update_all.ps1 -ForcedPackages $forced
     $allexits = 0
-    Get-ChildItem .\automatic\ | ForEach-Object {.\build_tests\installcheck.ps1 -PackageName $_.Name; if ($lastexitcode -gt 0) {$allexits ++}}
+    Get-ChildItem .\automatic\ -Filter 'hwmonitor' | ForEach-Object {
+      (Test-Package $_.FullName -Install -Uninstall *> .\install.log) ;
+      if ($lastexitcode -gt 0) {
+        $allexits ++
+      };
+    }
+
+    Get-Content .\install.log
     write-host 'done testing'
     if ($allexits -ne 0) {exit 99}
     
@@ -105,6 +112,7 @@ artifacts:
 - path: Update-AUPackages.md
 - path: au_temp.zip
 - path: chocolatey.log
+- path: install.log
 
 notifications:
 - provider: Email
@@ -113,5 +121,5 @@ notifications:
   on_build_failure: true
   on_build_status_changed: true
 
-#on_finish:
-#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+on_finish:
+- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))

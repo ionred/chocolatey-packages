@@ -10,9 +10,9 @@ $packageArgs = @{
   unzipLocation = $toolsDir
   fileType      = $installerType
   url           = $url
-  silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+  silentArgs    = '/SILENT /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes= @(0)
-  softwareName  = 'hwmonitor*'
+  softwareName  = '*hwmonitor*'
   checksum      = '2203e10b9277c0d74c3c12dc6808ea82f581fe01bd78a51b064d413eea9fd149'
   checksumType  = 'sha256'
 };
