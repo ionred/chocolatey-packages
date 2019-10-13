@@ -90,7 +90,7 @@ build_script:
     $au_Push = $false
     ./update_all.ps1 -ForcedPackages $forced
     $allexits = 0
-    Get-ChildItem .\automatic\ -Filter 'hwmonitor' | ForEach-Object {
+    Get-ChildItem .\automatic\ | ForEach-Object {
       (Test-Package $_.FullName -Install -Uninstall *> .\install.log) ;
       if ($lastexitcode -gt 0) {
         $allexits ++
