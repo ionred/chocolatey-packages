@@ -98,7 +98,7 @@ build_script:
     #   };
     # }
 
-    Get-Content .\install.log
+    if (Test-Path .\install.log) {Get-Content .\install.log}
     write-host 'done testing'
     if ($allexits -ne 0) {exit 99}
     
