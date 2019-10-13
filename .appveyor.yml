@@ -105,9 +105,7 @@ build_script:
 #    $info | ? Updated -match $true | select -ExpandProperty Name | % { $au_Push = $true; ./update_all.ps1 -ForcedPackages $_}
     $info | ? Updated -match $true | select -ExpandProperty Name | ForEach-Object {
       (Test-Package $_.FullName -Install -Uninstall *> .\install.log) ;
-      if ($lastexitcode -gt 0) {
-        $allexits ++
-      };
+      if ($lastexitcode -gt 0) { $allexits ++ };
     }
     
     7z a au_temp.zip $Env:TEMP\chocolatey\au\*
