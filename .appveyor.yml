@@ -53,6 +53,7 @@ install:
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
 - git --version
+#- ps: choco install wormies-au-helpers
 - ps: |
     git clone -q https://github.com/majkinetor/au.git $Env:TEMP/au
     . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
@@ -90,18 +91,24 @@ build_script:
     $au_Push = $false
     ./update_all.ps1 -ForcedPackages $forced
     $allexits = 0
-    Get-ChildItem .\automatic\ | ForEach-Object {
-      (Test-Package $_.FullName -Install -Uninstall *> .\install.log) ;
-      if ($lastexitcode -gt 0) {
-        $allexits ++
-      };
-    }
+    # Get-ChildItem .\automatic\ | ForEach-Object {
+    #   (Test-Package $_.FullName -Install -Uninstall *> .\install.log) ;
+    #   if ($lastexitcode -gt 0) {
+    #     $allexits ++
+    #   };
+    # }
 
     Get-Content .\install.log
     write-host 'done testing'
     if ($allexits -ne 0) {exit 99}
     
-    $info | ? Updated -match $true | select -ExpandProperty Name | % { $au_Push = $true; ./update_all.ps1 -ForcedPackages $_}
+#    $info | ? Updated -match $true | select -ExpandProperty Name | % { $au_Push = $true; ./update_all.ps1 -ForcedPackages $_}
+    $info | ? Updated -match $true | select -ExpandProperty Name | ForEach-Object {
+      (Test-Package $_.FullName -Install -Uninstall *> .\install.log) ;
+      if ($lastexitcode -gt 0) {
+        $allexits ++
+      };
+    }
     
     7z a au_temp.zip $Env:TEMP\chocolatey\au\*
     cp C:\ProgramData\chocolatey\logs\chocolatey.log .
