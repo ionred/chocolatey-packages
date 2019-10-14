@@ -32,6 +32,8 @@ function global:au_GetLatest {
         $b = [string]$a.Revision
         $c = [int32]$b.PadRight(10,'0') +3
         $version = "$($a.Major).$($a.Minor).$($a.Build).$($c)"
+    } else {
+        $version = $version_real
     }
 
     $download32 = "$($downloads1)$($module_name32)$($downloads2)$($version_real)$($downloads3)"
