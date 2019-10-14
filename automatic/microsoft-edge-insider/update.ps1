@@ -27,7 +27,7 @@ function global:au_GetLatest {
     if ($version_real.Substring(0,8) -eq '78.0.276') {
         $a = [version]$version_real
         $b = [string]$a.Revision
-        $c = [int32]$b.PadRight(10,'0') +2
+        $c = [int32]$b.PadRight(10,'0') +3
         $version = "$($a.Major).$($a.Minor).$($a.Build).$($c)"
     }
 
