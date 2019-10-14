@@ -1,6 +1,16 @@
+
+
+
 import-module au
-$versions = 'https://32767.ga/edge/msedge-dev-win-arm64.json'
-$downloads = 'https://www.microsoftedgeinsider.com/en-us/enterprise'
+$module_name32 = 'msedge-dev-win-x86'
+$module_name64 = 'msedge-dev-win-x64'
+$versionpage1 = 'https://msedge.api.cdp.microsoft.com/api/v1/contents/Browser/namespaces/Default/names/'
+$versionpage2 = '/versions/latest?action=select'
+$downloads1 = 'https://msedge.api.cdp.microsoft.com/api/v1/contents/Browser/namespaces/Default/names/'
+$downloads2 = '/versions/'
+$downloads3 = '/files?action=GenerateDownloadInfo'
+$dlparams = @{'action'='GenerateDownloadInfo'} | ConvertTo-xml
+$params = '{"targetingAttributes": {}}'
 
 function global:au_SearchReplace {
     @{
@@ -14,21 +24,32 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    
-    
-    $version_page = Invoke-WebRequest -Uri $versions -UseBasicParsing
-    #tidy-5.1.25-win64.zip
-    #$re  = "tidy-.+-win(32|64).zip"
-    $version = ($version_page.Content -replace '\[\"', '[{"ver":"' -replace ',"', '}, {"ver":"' -replace ']', '}]' | ConvertFrom-Json) |Sort-Object -desc -Property { [version]$_.ver } | Select-Object -first 1 -ExpandProperty ver
-    $download_page = Invoke-WebRequest -Uri $downloads 
-    $url32 = ($download_page.AllElements | Where-Object data-download-enterpriseid -match "Dev32MSI" |Select-Object -first 1 -ExpandProperty data-download-url)
-    $url64 = ($download_page.AllElements | Where-Object data-download-enterpriseid -match "Dev64MSI" |Select-Object -first 1 -ExpandProperty data-download-url)
-    
-    #$version = $url -replace '.exe', '' -split '_' | Select-Object -Last 1
-    #$url32 = 'https://github.com' + $url[0]
-    #$url64 = 'https://github.com' + $url[1]
+  
+    $version_real=(Invoke-WebRequest "$($versionpage1)$($module_name32)$($versionpage2)" -Method POST -ContentType 'application/json' -Body $params | ConvertFrom-Json).ContentID.Version
 
-    $Latest = @{URL32 = $url32; URL64 = $url64; Version = $version; }
+    if ($version_real.Substring(0,8) -eq '78.0.276') {
+        $a = [version]$version_real
+        $b = [string]$a.Revision
+        $c = [int32]$b.PadRight(10,'0') +3
+        $version = "$($a.Major).$($a.Minor).$($a.Build).$($c)"
+    }
+
+    $download32 = "$($downloads1)$($module_name32)$($downloads2)$($version_real)$($downloads3)"
+    $download64 = "$($downloads1)$($module_name64)$($downloads2)$($version_real)$($downloads3)"
+
+    $headers = @{}
+    $headers["content-type"] = "application/json"
+
+
+    $url_32 = ((Invoke-WebRequest -Uri $download32 -Method 'POST' -Body $dlparams -Headers $headers -ContentType 'application/x-www-form-urlencoded').Content | ConvertFrom-Json).url | Select-Object -first 1
+    $url_64 = ((Invoke-WebRequest -Uri $download64 -Method 'POST' -Body $dlparams -Headers $headers -ContentType 'application/x-www-form-urlencoded').Content | ConvertFrom-Json).url | Select-Object -first 1
+
+    #$url64 = ((Invoke-WebRequest -Uri $download64 -Method 'POST' -Body { action:'GenerateDownloadInfo' } -Headers $headers -ContentType 'application/x-www-form-urlencoded').Content | convertfrom-json).url | Select-Object -first 1
+  
+    $Latest = @{URL32 = $url_32; URL64 = $url_64; Version = $version; }
     return $Latest
 }
+write-host 'end'
+#global:au_GetLatest
+#$Latest
 update
