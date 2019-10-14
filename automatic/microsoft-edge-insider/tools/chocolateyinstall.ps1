@@ -1,7 +1,7 @@
 ﻿
 $ErrorActionPreference = 'Stop';
-$url32        = 'http://msedge.f.tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/c0b0e6b3-2799-4eee-90a2-eaaab0857a3a?P1=1571167556&P2=402&P3=2&P4=FKhqp8SdWrPyxqVeOXC%2fChMUrsFahatck2c9kgqtXKqRCJVpsTHOy4zTBGW0hUc97Cx8ayyPezbDOHQRg%2b8bSQ%3d%3d'
-$url64      = 'http://msedge.f.tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/5c1c700a-f349-4d76-bacb-68a100176c7e?P1=1571167556&P2=402&P3=2&P4=Q6SiYJrqQojipgo4GqylYHz3ZWxzvvEpTn32sYDovnH5fFYW57PeOwuUHvDVTGn8seA6v1%2b0OKKEfx1JaWZRcg%3d%3d'
+$url32        = 'http://msedge.f.tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/c0b0e6b3-2799-4eee-90a2-eaaab0857a3a?P1=1571168272&P2=402&P3=2&P4=V92FvMtB7DzBJ6o4WO%2bn0%2bUUA5ub%2foL7pSkecs%2fm3FdpwEbhIXymsiqBvK4204iYDOrT1teEV4VBkUEw9zwUhg%3d%3d'
+$url64      = 'http://msedge.f.tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/5c1c700a-f349-4d76-bacb-68a100176c7e?P1=1571168272&P2=402&P3=2&P4=P%2f3Sgz6eg%2fWLQA579XyXjeGgVlk3p%2bWRucf9fl4s74k895s1CXQloXuZDrN0nDi0DlodILyTHFQ%2b5EpPqw0Xzg%3d%3d'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
