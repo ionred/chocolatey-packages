@@ -5,7 +5,7 @@ $url64      = 'https://go.microsoft.com/fwlink/?linkid=2093291'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  fileType      = 'MSI'
+  fileType      = 'EXE'
   url           = $url32
   url64bit      = $url64
 

@@ -5,7 +5,7 @@ $url64      = 'http://msedge.f.tlu.dl.delivery.mp.microsoft.com/filestreamingser
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  fileType      = 'MSI'
+  fileType      = 'EXE'
   url           = $url32
   url64bit      = $url64
 
