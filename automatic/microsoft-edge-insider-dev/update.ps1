@@ -1,7 +1,7 @@
 import-module au
 $module_name = 'msedge-dev-win-x64'
-$download_module_name32 = 'Beta32MSI'
-$download_module_name64 = 'Beta64MSI'
+$download_module_name32 = 'Dev32MSI'
+$download_module_name64 = 'Dev64MSI'
 $versionpage1 = 'https://msedge.api.cdp.microsoft.com/api/v1/contents/Browser/namespaces/Default/names/'
 $versionpage2 = '/versions/latest?action=select'
 $downloads = 'https://www.microsoftedgeinsider.com/en-us/enterprise'
