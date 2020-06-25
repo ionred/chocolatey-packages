@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>microsoft-edge-insider-dev</id>
-    <version>85.0.545.0</version>
+    <version>85.0.552.1</version>
     <owners>ionred</owners>
     <title>Microsoft Edge Insider - Dev</title>
     <authors>Microsoft</authors>
@@ -18,7 +18,9 @@
     <tags>edge-insider edge microsoft browser dev chromium</tags>
     <summary>A dev version of Microsoft's New Edge browser through the Insider Channel, now based on the Chromium open source browser.</summary>
     <releaseNotes>https://techcommunity.microsoft.com/t5/forums/searchpage/tab/message?filter=location&amp;q=%22dev%20channel%20update%20to%22&amp;noSynonym=false&amp;location=forum-board:EdgeInsiderDiscussions&amp;sort_by=-topicPostDate&amp;collapse_discussion=true</releaseNotes>
-    <description><![CDATA[Updates released by Microsoft once a week. Updates submitted to Chocolatey Community Feed for moderation within 24 hours. If a new version has been out more than 24 hours and there is no pending version, please message me through Disqus, Gitter, or at ionred.dev (a t ) gmail [dot] com. This package is dev version of Microsoft's New Edge browser through the Insider Channel, now based in part on the Chromium open source browser. Portions of this browser are based on Third Party Open source software. The entire list of Microsoft utilized open source is available at https://thirdpartysource.microsoft.com/ while the portions and licenses specific to Edge Dev are available at edge://credits/ once installed.
+    <description><![CDATA[Release notes are not available from an official page, but can be found by searching in the microsoft tech community un der Communities>Products>Microsoft Edge Insider>Discussions for "Dev Channel update to". Link: https://techcommunity.microsoft.com/t5/forums/searchpage/tab/message?filter=location&q=%22dev%20channel%20update%20to%22&noSynonym=false&location=forum-board:EdgeInsiderDiscussions&sort_by=-topicPostDate&collapse_discussion=true 
+
+Updates released by Microsoft once a week. Updates submitted to Chocolatey Community Feed for moderation within 24 hours. If a new version has been out more than 24 hours and there is no pending version, please message me through Disqus, Gitter, or at ionred.dev (a t ) gmail [dot] com. This package is dev version of Microsoft's New Edge browser through the Insider Channel, now based in part on the Chromium open source browser. Portions of this browser are based on Third Party Open source software. The entire list of Microsoft utilized open source is available at https://thirdpartysource.microsoft.com/ while the portions and licenses specific to Edge Dev are available at edge://credits/ once installed.
 ]]></description>
   </metadata>
   <files>
