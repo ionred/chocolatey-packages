@@ -1,7 +1,7 @@
 ﻿
 $ErrorActionPreference = 'Stop';
-$url32        = 'http://dl.delivery.mp.microsoft.com/filestreamingservice/files/234745f3-d209-4a40-9567-73cbbecf20aa/MicrosoftEdgeDevEnterpriseX86.msi'
-$url64      = 'http://dl.delivery.mp.microsoft.com/filestreamingservice/files/a06f5de7-f7d1-41a6-ae90-d8f5ece7e395/MicrosoftEdgeDevEnterpriseX64.msi'
+$url32        = 'http://dl.delivery.mp.microsoft.com/filestreamingservice/files/ca4facc6-00a4-43cb-92be-f7ed770fd416/MicrosoftEdgeDevEnterpriseX86.msi'
+$url64      = 'http://dl.delivery.mp.microsoft.com/filestreamingservice/files/afc5daba-8d8c-4c0d-8040-08665a680159/MicrosoftEdgeDevEnterpriseX64.msi'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -11,9 +11,9 @@ $packageArgs = @{
 
   softwareName  = 'Microsoft Edge Dev'
 
-  checksum32      = 'cbaf1f489b29f15a531d63b9c747a843b13fd61f0a5bd87e405ee359c8259d71'
+  checksum32      = 'b789443533d2c8fae97ceecfdacbd2229aadec1e792a98983136081b6b824735'
   checksumType  = 'sha256'
-  checksum64    = '56adf15e62f556fcc5bd64638a37f30bef13cec1948aaf6b1ac1dde5ea92ab38'
+  checksum64    = '3c0afe6bd437d1805f58d53bf36909149fc9993e98698b131d32641fae290fd9'
   checksumType64= 'sha256'
 
   silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
