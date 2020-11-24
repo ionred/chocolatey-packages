@@ -3,7 +3,7 @@
 $packageName = 'hwmonitor';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)";
 $installerType = 'EXE';
-$url = 'http://download.cpuid.com/hwmonitor/hwmonitor_1.42.exe';
+$url = 'http://download.cpuid.com/hwmonitor/hwmonitor_1.43.exe';
 
 $packageArgs = @{
   packageName   = $packageName
@@ -13,7 +13,7 @@ $packageArgs = @{
   silentArgs    = '/SILENT /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes= @(0)
   softwareName  = '*hwmonitor*'
-  checksum      = '9e144cb22bab8b94b26753b60382fbf7acb86f03f2ba0cf092aabd8e73918da7'
+  checksum      = '865aacb73db4c436e9afaeed68062e81024c34884a012b4228858083c3299f22'
   checksumType  = 'sha256'
 };
 Install-ChocolateyPackage @packageArgs;
