@@ -1,7 +1,7 @@
 ﻿
 $ErrorActionPreference = 'Stop';
-$url32        = 'https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/28137652-e999-4276-9dce-9f43171c3eb5/MicrosoftEdgeBetaEnterpriseX86.msi'
-$url64      = 'https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/f7e3cce7-0b5e-4e59-8921-658be27500ec/MicrosoftEdgeBetaEnterpriseX64.msi'
+$url32        = 'https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/a3666152-c2be-4f65-813a-fa2c01fd22d2/MicrosoftEdgeBetaEnterpriseX86.msi'
+$url64      = 'https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/c05c8a20-3a2f-4bec-94ae-8e4e3c7bbc46/MicrosoftEdgeBetaEnterpriseX64.msi'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -11,9 +11,9 @@ $packageArgs = @{
 
   softwareName  = 'Microsoft Edge Beta'
 
-  checksum32    = 'd272f8593a118e2f4640fbf737e96dfcdfbe7d248f021469fad03e0d2435750f'
+  checksum32    = 'c921ad38336372cd9a4b40dcdff794edd7b49e73009bdf2554fe8fa7bff8b22c'
   checksumType  = 'sha256'
-  checksum64    = '139f952d651c11aeb2761cc20e9bd90201e6a212653bfb30e6c8a56845697213'
+  checksum64    = '1f99d6fcfd5d2134dee53d4eca8b6c6ab24ca42a23ce15fce5ef39b17557a2dc'
   checksumType64= 'sha256'
 
   silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
