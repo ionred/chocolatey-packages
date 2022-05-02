@@ -18,7 +18,7 @@ function global:au_GetLatest {
 
     #tidy-5.1.25-win64.zip
     #$re  = "tidy-.+-win(32|64).zip"
-    $url = (($download_page.links | Where-Object href -match "/downloads/.*.exe$" | Select-Object -first 1 -expand href) | ForEach-Object { $_ -replace 'http://www.cpuid.com/downloads', '' -replace '/downloads', '' } | ForEach-Object { "http://download.cpuid.com$_"})
+    $url = (($download_page.links | Where-Object href -match "/downloads/.*.exe$" | Select-Object -first 1 -expand href) | ForEach-Object { $_ -replace 'http://www.cpuid.com/downloads', '' -replace '/downloads', '' } | ForEach-Object { "https://download.cpuid.com$_"})
 
     $version = $url -replace '.exe', '' -split '_' | Select-Object -Last 1
     #$url32 = 'https://github.com' + $url[0]

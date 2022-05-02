@@ -3,7 +3,7 @@
 $packageName = 'hwmonitor';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)";
 $installerType = 'EXE';
-$url = 'http://download.cpuid.com/hwmonitor/hwmonitor_1.46.exe';
+$url = 'https://download.cpuid.com/hwmonitor/hwmonitor_1.46.exe';
 
 $packageArgs = @{
   packageName   = $packageName
