@@ -13,7 +13,7 @@ $packageArgs = @{
   silentArgs    = '/SILENT /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes= @(0)
   softwareName  = '*hwmonitor*'
-  checksum      = '024420291dddd0ad606d995e42794ee2e4907201ed72c8cd8efb6a7c7b418bf0'
+  checksum      = '151bec617b393c99ddb59b3b7fb4fd150ebdae2222e89f25151252b231795e0a'
   checksumType  = 'sha256'
 };
 Install-ChocolateyPackage @packageArgs;
