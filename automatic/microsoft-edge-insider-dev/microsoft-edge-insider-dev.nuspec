@@ -8,7 +8,7 @@
     <title>Microsoft Edge Insider - Dev</title>
     <authors>Microsoft</authors>
     <projectUrl>https://www.microsoftedgeinsider.com/en-us/welcome</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/ionred/chocolatey-packages/master/automatic/microsoft-edge-insider/microsoft-edge-insider-dev.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/ionred/chocolatey-packages/master/automatic/microsoft-edge-insider-dev/microsoft-edge-insider-dev.png</iconUrl>
     <packageSourceUrl>https://github.com/ionred/chocolatey-packages/tree/master/automatic/microsoft-edge-insider-dev</packageSourceUrl>
     <licenseUrl>https://www.microsoft.com/en-us/servicesagreement/</licenseUrl>
     <docsUrl>https://microsoftedgesupport.microsoft.com/hc/en-us</docsUrl>
