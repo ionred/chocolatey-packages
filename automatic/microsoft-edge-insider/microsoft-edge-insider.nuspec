@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>microsoft-edge-insider</id>
-    <version>104.0.1293.21</version>
+    <version>107.0.1418.23</version>
     <owners>ionred</owners>
     <title>Microsoft Edge Insider - Beta</title>
     <authors>Microsoft</authors>
     <projectUrl>https://www.microsoftedgeinsider.com/en-us/welcome</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/ionred/chocolatey-packages/master/icons/microsoft-edge-insider.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/ionred/chocolatey-packages/master/automatic/microsoft-edge-insider/microsoft-edge-insider.png</iconUrl>
     <packageSourceUrl>https://github.com/ionred/chocolatey-packages/tree/master/automatic/microsoft-edge-insider</packageSourceUrl>
     <licenseUrl>https://www.microsoft.com/en-us/servicesagreement/</licenseUrl>
     <docsUrl>https://microsoftedgesupport.microsoft.com/hc/en-us</docsUrl>
