@@ -13,7 +13,7 @@ $packageArgs = @{
   silentArgs    = '/SILENT /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes= @(0)
   softwareName  = '*hwmonitor*'
-  checksum      = '78D3D4CD218B5C9CF3BDBA1021A6B4E93EC1D6A5AFBE260BB8900221B5E3C4A6'
+  checksum      = '78d3d4cd218b5c9cf3bdba1021a6b4e93ec1d6a5afbe260bb8900221b5e3c4a6'
   checksumType  = 'sha256'
 }
 
