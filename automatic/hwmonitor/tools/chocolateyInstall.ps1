@@ -3,7 +3,7 @@
 $packageName = 'hwmonitor'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $installerType = 'EXE'
-$url = 'https://download.cpuid.com/hwmonitor/hwmonitor_1.48.exe'
+$url = 'https://download.cpuid.com/hwmonitor/hwmonitor_1.49.exe'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -13,7 +13,7 @@ $packageArgs = @{
   silentArgs    = '/SILENT /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes= @(0)
   softwareName  = '*hwmonitor*'
-  checksum      = '14fe1a1d30403cd500710c4ad1bbb222de7b8a2e94f49106e8161b625984457d'
+  checksum      = 'e1155564ca069c01f31233018c6db671b9248ee48ec28f1d666d6fa2b77b5524'
   checksumType  = 'sha256'
 }
 
