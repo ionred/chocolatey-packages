@@ -26,6 +26,8 @@ function global:au_GetLatest {
     @{
       URL32 = $url32; 
       URL64 = $url64; 
+	  Checksum32 = $Checksum32;
+	  Checksum64 = $Checksum64;
       Version = $version; 
       RemoteVersion = $version;
      }
