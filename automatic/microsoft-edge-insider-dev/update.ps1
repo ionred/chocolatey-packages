@@ -19,7 +19,9 @@ function global:au_GetLatest {
     $version = ($releases.Releases | Where-Object {$_.Platform -eq 'Windows'} | Where-Object {$_.Architecture -eq 'x64'}).ProductVersion
     $url32 = ($releases.Releases | Where-Object {$_.Platform -eq 'Windows'} | Where-Object {$_.Architecture -eq 'x86'}).Artifacts.Location
     $url64 = ($releases.Releases | Where-Object {$_.Platform -eq 'Windows'} | Where-Object {$_.Architecture -eq 'x64'}).Artifacts.Location  
-    $Latest = @{URL32 = $url32; URL64 = $url64; Version = $version; }
+    $Checksum64 = ($releases.Releases | Where-Object {$_.Platform -eq 'Windows'} | Where-Object {$_.Architecture -eq 'x64'}).Artifacts.Hash
+    $Checksum32 = ($releases.Releases | Where-Object {$_.Platform -eq 'Windows'} | Where-Object {$_.Architecture -eq 'x86'}).Artifacts.Hash
+    $Latest = @{URL32 = $url32; URL64 = $url64; Version = $version; Checksum32 = $Checksum32; Checksum64 = $Checksum64 }
     return $Latest
 }
 write-host 'end'
