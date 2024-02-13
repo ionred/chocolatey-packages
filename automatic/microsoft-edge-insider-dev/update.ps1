@@ -2,18 +2,12 @@ import-module au
 $versionpage1 = 'https://edgeupdates.microsoft.com/api/products'
 $branch = 'Dev'
 
-function global:au_BeforeUpdate {
-  $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32
-  $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64
-}
-
-
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*url\s*=\s*)('.*')" = "`$1'$($Latest.URL32)'"
+      "(?i)(^\s*url32bit\s*=\s*)('.*')" = "`$1'$($Latest.URL32)'"
       "(?i)(^\s*url64bit\s*=\s*)('.*')" = "`$1'$($Latest.URL64)'"
-      "(?i)(^\s*checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+      "(?i)(^\s*checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
       "(?i)(^\s*checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
       "(?i)(^[$]version\s*=\s*)('.*')" = "`$1'$($Latest.RemoteVersion)'"
     }
@@ -32,10 +26,10 @@ function global:au_GetLatest {
     @{
       URL32 = $url32; 
       URL64 = $url64; 
+	  Checksum32 = $Checksum32;
+	  Checksum64 = $Checksum64;
       Version = $version; 
-      RemoteVersion = $version; 
-      Checksum32 = $Checksum32; 
-      Checksum64 = $Checksum64 
+      RemoteVersion = $version;
      }
 }
 
