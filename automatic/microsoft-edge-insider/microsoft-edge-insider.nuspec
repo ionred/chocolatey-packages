@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>microsoft-edge-insider</id>
-    <version>124.0.2478.27</version>
+    <version>124.0.2478.39</version>
     <owners>ionred</owners>
     <title>Microsoft Edge Insider - Beta</title>
     <authors>Microsoft</authors>
